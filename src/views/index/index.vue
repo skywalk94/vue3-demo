@@ -16,7 +16,10 @@
         state: 100,
         title: "首页",
       };
-      onMounted(() => {});
+
+      onMounted(() => {
+
+      });
 
       function goMain() {
         router.push({
