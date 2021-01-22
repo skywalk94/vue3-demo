@@ -25,31 +25,29 @@
         title: "首页",
         isShow: false
       })
-
       onMounted(() => {});
-      const changeVal = () => {
-        that.title = "主页"
-      }
-      const popShow = () => {
-        that.isShow = true
-      }
-      const closePop = () => {
-        that.isShow = false
-      }
-      const goMain = () => {
-        router.push({
-          path: "/main",
-          prame: {
-            id: 123
-          }
-        })
+      const methods = {
+        changeVal() {
+          that.title = "主页"
+        },
+        popShow() {
+          that.isShow = true
+        },
+        closePop() {
+          that.isShow = false
+        },
+        goMain() {
+          router.push({
+            path: "/main",
+            prame: {
+              id: 123
+            }
+          })
+        }
       }
       return {
         ...toRefs(that),
-        goMain,
-        changeVal,
-        popShow,
-        closePop
+        ...methods
       };
     },
   };

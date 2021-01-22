@@ -24,16 +24,19 @@
             },
         },
         setup(props, context) {
-            const that = reactive({
-                title: 123,
+            const that = reactive({})
+            // 可监听父组件的变化
+            watchEffect(() => {
+                // console.log(props.isShow)
             })
-            watchEffect(() => {})
-            const closePop = () => {
-                context.emit('close', false)
+            const methods = {
+                closePop() {
+                    context.emit('close', false)
+                }
             }
             return {
                 ...toRefs(that),
-                closePop,
+                ...methods,
             }
         },
     }
