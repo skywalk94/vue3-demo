@@ -16,6 +16,7 @@
   } from "vue";
   import popUp from "../../components/popUp/popUp"
   import router from "../../router";
+  import axiosApi from "../../axios"
   export default {
     components: {
       popUp
@@ -25,7 +26,13 @@
         title: "首页",
         isShow: false
       })
-      onMounted(() => {});
+      onMounted(() => {
+        getApi()
+      });
+      const getApi = async () => {
+        let res = await axiosApi("getClassSchedule", {}, "post")
+        console.log(res)
+      }
       const methods = {
         changeVal() {
           that.title = "主页"
