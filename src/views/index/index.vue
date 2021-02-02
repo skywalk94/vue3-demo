@@ -15,13 +15,17 @@
     toRefs
   } from "vue";
   import popUp from "../../components/popUp/popUp"
-  import router from "../../router";
+  import {
+    useRouter
+  } from "vue-router";
   import axiosApi from "../../axios"
   export default {
     components: {
       popUp
     },
+
     setup() {
+      const router = useRouter()
       const that = reactive({
         title: "首页",
         isShow: false
@@ -31,7 +35,7 @@
       });
       const getApi = async () => {
         let res = await axiosApi("getClassSchedule", {}, "post")
-        console.log(res)
+        // console.log(res)
       }
       const methods = {
         changeVal() {
@@ -46,7 +50,7 @@
         goMain() {
           router.push({
             path: "/main",
-            prame: {
+            query: {
               id: 123
             }
           })
