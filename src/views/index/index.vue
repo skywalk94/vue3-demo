@@ -4,7 +4,7 @@
     <button @click="changeVal()">改变值</button>
     <button @click="goMain()">跳转</button>
     <button @click="popShow()">打开子组件弹窗</button>
-    <popUp :isShow="isShow" @close="closePop">弹窗值</popUp>
+    <popUp v-model:isShow="isShow">弹窗内容</popUp>
   </div>
 </template>
 
@@ -23,7 +23,6 @@
     components: {
       popUp
     },
-
     setup() {
       const router = useRouter()
       const that = reactive({
@@ -43,9 +42,6 @@
         },
         popShow() {
           that.isShow = true
-        },
-        closePop() {
-          that.isShow = false
         },
         goMain() {
           router.push({

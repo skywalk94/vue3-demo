@@ -31,7 +31,7 @@
             })
             const methods = {
                 closePop() {
-                    context.emit('close', false)
+                    context.emit('update:isShow', false)
                 }
             }
             return {

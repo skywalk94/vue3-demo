@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>第二页</h1>
+    <h1>第二页{{value}}</h1>
   </div>
 </template>
 
@@ -16,10 +16,10 @@
   export default {
     setup() {
       const route = useRoute()
-      const that = reactive({})
-      onMounted(() => {
-        console.log(route.query.id)
+      const that = reactive({
+        value: route.query.id
       })
+      onMounted(() => {})
       return {
         ...toRefs(that)
       }
