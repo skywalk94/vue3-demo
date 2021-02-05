@@ -14,7 +14,7 @@
     onMounted,
     toRefs
   } from "vue";
-  import popUp from "../../components/popUp/popUp"
+  import popUp from "../../components/popUp"
   import {
     useRouter
   } from "vue-router";

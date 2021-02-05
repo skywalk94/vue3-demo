@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>第二页{{value}}</h1>
+    <p>{{name}}</p>
+    <inputBox v-model:value="name"></inputBox>
   </div>
 </template>
 
@@ -13,11 +15,16 @@
   import {
     useRoute
   } from "vue-router";
+  import inputBox from "../../components/inputBox"
   export default {
+    components: {
+      inputBox
+    },
     setup() {
       const route = useRoute()
       const that = reactive({
-        value: route.query.id
+        value: route.query.id,
+        name: 123
       })
       onMounted(() => {})
       return {

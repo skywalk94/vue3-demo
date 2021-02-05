@@ -8,7 +8,7 @@ const router = createRouter({
     routes: [{
             path: "/",
             name: "index",
-            component: () => import( /* webpackChunkName: "index" */ "@/views/index/index"),
+            component: () => import( /* webpackChunkName: "index" */ "@/views/index"),
             meta: {
                 title: "首页"
             }
@@ -16,7 +16,7 @@ const router = createRouter({
         {
             path: "/main",
             name: "main",
-            component: () => import( /* webpackChunkName: "main" */ "@/views/main/main"),
+            component: () => import( /* webpackChunkName: "main" */ "@/views/main"),
             meta: {
                 title: "主要"
             }

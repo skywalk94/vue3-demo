@@ -42,5 +42,5 @@
     }
 </script>
 
-<style src="./popUp.less" lang="less" scoped>
+<style src="./index.less" lang="less" scoped>
 </style>
