@@ -28,7 +28,7 @@ export default {
     });
     const getApi = async () => {
       let res = await axiosApi("getClassSchedule", {}, "post");
-      // console.log(res)
+      console.log(res);
     };
     const methods = {
       changeVal() {
@@ -41,7 +41,7 @@ export default {
         router.push({
           path: "/main",
           query: {
-            id: 123,
+            id: 1,
           },
         });
       },

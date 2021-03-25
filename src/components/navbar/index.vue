@@ -3,7 +3,6 @@
     <div class="box">
       <slot>标题</slot>
     </div>
-    <div class="placehoder"></div>
   </teleport>
 </template>
 <script>
